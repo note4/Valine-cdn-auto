@@ -1,7 +1,7 @@
 {
-  "name": "valine",
+  "name": "valine-cdn-auto",
   "version": "1.5.3",
-  "description": "A simple comment system based on Leancloud.",
+  "description": "A simple comment system based on Leancloud. av-min 根据valine域名自动读取CDN。",
   "main": "dist/Valine.min.js",
   "author": "xCss <xioveliu@gmail.com> (https://github.com/xCss)",
   "scripts": {
@@ -20,9 +20,9 @@
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xcss/Valine.git"
+    "url": "git+https://github.com/note4/Valine-cdn-auto.git"
   },
-  "homepage": "https://github.com/xcss/Valine#readme",
+  "homepage": "https://github.com/note4/Valine-cdn-auto#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.25.0",

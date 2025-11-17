@@ -2,8 +2,16 @@
 
 ## cdn 地址
 
-- <https://cdn.jsdelivr.net/npm/valine-cdn-auto@1.5.3/dist/Valine.min.js>
-- <https://unpkg.com/valine-cdn-auto@1.5.3/dist/Valine.min.js>
+- 最新版
+  - <https://unpkg.com/valine-cdn-auto/dist/Valine.min.js>
+  - <https://cdn.jsdelivr.net/npm/valine-cdn-auto/dist/Valine.min.js>
+
+- 指定版本
+  - <https://unpkg.com/valine-cdn-auto@1.5.3/dist/Valine.min.js>
+  - <https://cdn.jsdelivr.net/npm/valine-cdn-auto@1.5.3/dist/Valine.min.js>
+
+- 支持版本
+  - 1.5.3
 
 ## av-min 根据 valine 域名自动读取CDN
 

@@ -5,15 +5,15 @@
 - <https://cdn.jsdelivr.net/npm/valine-cdn-auto@1.5.3/dist/Valine.min.js>
 - <https://unpkg.com/valine-cdn-auto@1.5.3/dist/Valine.min.js>
 
-- av-min 根据 valine 域名自动读取CDN。
+## av-min 根据 valine 域名自动读取CDN
 
 如果 valine.min.js 域名 为 cdn.jsdelivr.net 使用 `https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js`。
 
 如果 valine.min.js 域名不是 cdn.jsdelivr.net 使用 `https://unpkg.com/leancloud-storage@3/dist/av-min.js`。
 
-例如：使用
+例如：使用 `https://unpkg.com/valine-cdn-auto@1.5.3/dist/Valine.min.js` 请求的av-min.js 会是 `https://unpkg.com/leancloud-storage@3/dist/av-min.js`
 
-
+***
 
 > 由于某些原因，`src目录`将从`v1.4.0`后暂停更新.  
   For some reason, the `src directory` will be suspended from updating after `v1.4.0`.

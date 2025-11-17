@@ -4292,6 +4292,34 @@
                         },
                     }
                 }
+
+                // 自动选择 CDN 
+                var getCdnUrl = function() {
+                    // 检测当前域名
+                    var hostname = window.location.hostname;
+                    var scriptsrc = '';
+                    
+                    // 尝试获取当前脚本的 src
+                    var scripts = document.scripts;
+                    for (var i = 0; i < scripts.length; i++) {
+                        if (scripts[i].src && scripts[i].src.indexOf('valine') > -1) {
+                            scriptsrc = scripts[i].src;
+                            break;
+                        }
+                    }
+                    
+                    // 判断是否来自 jsdelivr
+                    var isJsdelivr = hostname.indexOf('jsdelivr.net') > -1 || 
+                                            scriptsrc.indexOf('cdn.jsdelivr.net') > -1 ||
+                                            scriptsrc.indexOf('jsdelivr.net') > -1;
+                    
+                    if (isJsdelivr) {
+                        return 'https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js';
+                    } else {
+                        return 'https://unpkg.com/leancloud-storage@3/dist/av-min.js';
+                    }
+                };
+                // 自动选择 CDN 结束
                 !(function (t, n) {
                     if ('AV' in window) {
                         var r = window.AV.version || window.AV.VERSION
@@ -4302,7 +4330,7 @@
                     pt
                         ? n && n()
                         : e.sdkLoader(
-                              '//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js',
+                              getCdnUrl(),  // 使用动态 CDN URL
                               'AV',
                               function (e) {
                                   var r = 'https://',
